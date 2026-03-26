@@ -1,0 +1,92 @@
+# Online Educational Platform — System Analysis
+
+System requirements analysis and workflow design for a comprehensive online tutoring platform supporting curriculum-based lessons, live sessions, financial settlement, and multi-role management.
+
+---
+
+## 🎯 Platform Overview
+
+A web-based educational platform for individual and group tutoring sessions aligned with the Egyptian national curriculum — supporting all subjects and grade levels.
+
+---
+
+## 👥 Roles & Actors
+
+| Role | Responsibilities |
+|------|----------------|
+| Teacher | Upload content, manage schedule, conduct sessions, submit reports |
+| Student | Browse & purchase lessons, attend sessions, submit questions |
+| Parent/Guardian | Manage wallet, track child's progress |
+| Supervisor | Manage platform operations, assign session links, resolve issues |
+| Technical Support | Assist teachers and students with platform usage |
+| Admin | Full platform control and financial oversight |
+
+---
+
+## 📚 Core Modules
+
+### 1. Content Management
+- Lesson plans, quizzes, assignments, and PDF materials
+- Content visible only to students who purchased the lesson
+- Teacher profile with credentials and experience
+
+### 2. Session Management
+```plantuml
+@startuml Session_Flow
+
+|Supervisor|
+start
+:Review teacher schedule;
+:Create meeting link;
+:Assign to session slot;
+
+|Teacher|
+:Start session from platform;
+:System records attendance automatically;
+:Submit post-session report;
+(content covered + attendance);
+
+|System|
+:Calculate session cost;
+:Debit student wallet;
+:Credit teacher balance;
+
+stop
+@enduml
+```
+
+### 3. Financial Settlement
+
+| Model | Description |
+|-------|-------------|
+| Per-session fee | Fixed cost per lesson duration |
+| Cashback points | Wallet points redeemable for lessons |
+| Online payment | Payment gateway integration |
+
+### 4. Communication
+- Chat rooms per teacher-student group
+- Supervisor can join any chat room
+- Blog / Q&A section for curriculum questions
+- Educational articles by platform team
+
+---
+
+## 🔐 Access Control
+
+| Content Type | Access |
+|-------------|--------|
+| Lesson materials (PDF, quizzes) | Purchased students only |
+| Session link | Registered & paid students only |
+| Blog / Q&A | All users |
+| Teacher profile | Public |
+
+---
+
+## 🛠️ Tools Used
+- Systems Analysis (SRS / BRD)
+- PlantUML — Workflow diagrams
+- Mermaid — Sequence diagrams
+
+## Contact 
++201016312962
+ahmed.saied.fcis@gmail.com 
